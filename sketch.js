@@ -111,17 +111,17 @@ async function changeBackgroundh(){
     var response = await fetch("http://worldtimeapi.org/api/timezone/Asia/Tokyo");
       
       
-    //2.1 extrair a informação para o código usando o jso
+    
     var responseJSON = await response.json();
         console.log(responseJSON.datetime)
     
-        //4.dividir a string de informações jason e puxar apenas o indice hora
+       
         var datetime = responseJSON.datetime
         var hour = datetime.slice(11, 13)
       
         backgroundImg = loadImage(bg);
     
-        //5. criar as condições para mudar o tempo de acordo com a hora
+       
         if(hour >= 6 && hour<=7){
     
             bg = "sprites/bg.png";
