@@ -48,8 +48,8 @@ function setup(){
     box5 = new Box(810,160,70,70);
 
     //encontrar o valor em radianos para os troncos de cima se aboiarem um no outro
-    log4 = new Log(760,120,150, PI/4);
-    log5 = new Log(870,120,150, -PI/3);
+    log4 = new Log(760,120,150, PI/8);
+    log5 = new Log(870,120,150, -PI/7);
 
     bird = new Bird(200,50);
     slingshot = new SlingShot(bird.body,{x:200, y:50});
@@ -77,11 +77,13 @@ function draw(){
     box5.display();
     log4.display();
     log5.display();
+    
+    slingshot.display();  
 
     bird.display();
     platform.display();
     //Alterar a posição do estilingue no código para o passáro ficar na frente
-    slingshot.display();    
+  
  }
 
 }
